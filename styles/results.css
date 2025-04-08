@@ -1,0 +1,107 @@
+.show-results {
+    margin-left: 6rem;
+    animation-name: slideFade;
+    animation-duration: .5s;
+
+    & .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+
+        & label {
+            font: var(--label-large);
+            text-transform: uppercase;
+        }
+
+        & span {
+            font: var(--overline);
+            color: var(--content-secondary);
+            text-transform: uppercase;
+        }
+    }
+
+    & .numbers {
+        margin-block: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+        
+        & .number {
+            display: flex;
+            
+            & span {
+                font: bold 4rem/150% var(--font-roboto-mono);
+                color: var(--content-brand);
+                background-color: transparent;
+                border-radius: 28px;
+                padding: 1.125rem 1.375rem;
+                animation-name: slideLeft;
+                animation-duration: .5s;
+                animation-delay: .5s;
+                animation-fill-mode: both;
+                animation-timing-function: ease;
+            }
+        }
+    }
+
+    & button {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: var(--background-tertiary);
+        border: none;
+        display: flex;
+        gap: .5rem;
+        font: var(--label-medium);
+        text-transform: uppercase;
+        color: var(--content-primary);
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 8px;
+            inset: -2px;
+            z-index: -1;
+        }
+        
+        &:hover {
+            
+            & img[src*="Stroke"] {
+                animation-name: arrowRight;
+                animation-duration: 1s;
+            }
+            
+            &::before {
+                background: var(--gradient-border);
+            }
+        }
+
+        & .icon-again {
+            position: relative;
+
+            & img[src*="Stroke"] {
+                position: absolute;
+                left: 0;
+                top: 4px;
+            }
+
+            & img:nth-child(2) {
+                position: absolute;
+                left: 7px;
+                top: 10px;
+            }
+        }
+    }
+}
+
+@media (width < 1024px) {
+    .show-results {
+        margin-left: 0;
+        margin-block: 2rem;
+    }
+}

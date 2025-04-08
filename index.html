@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Numbers - Sorteador de números</title>
+    <script src="https://kit.fontawesome.com/597ea3cc74.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="company">
+        <img src="./assets/svg/brand.svg" alt="Logotipo da marca">
+        <span>Numbers</span>
+    </div>
+    <main>
+        <section>
+            <div class="content">
+                <div class="header">
+                    <p>Online - gratuito</p>
+                    <h1>Sorteador de números</h1>
+                </div>
+
+                <div class="questions">
+                    <div id="how-does-it-works" class="items">
+                        <i class="fa-solid fa-person-circle-question"></i>
+                        <div class="text">
+                            <p class="question">Como funciona o sorteador de números?</p>
+                            <p class="answer">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                        </div>
+                    </div>
+                    <div id="can-i-choice" class="items">
+                        <i class="fa-solid fa-person-circle-question"></i>
+                        <div class="text">
+                            <p class="question">Posso escolher o intervalo dos números?</p>
+                            <p class="answer">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="content-form">
+                    <div class="title-form">
+                        <label>Quero sortear:</label>
+                        <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                    </div>
+                    <div class="form">
+                        <div class="fields">
+                            <div id="first-number" class="number-field">
+                                <label for="numbers">Números</label>
+                                <input class="number-choice-one" min="0" id="numbers" type="number">
+                            </div>
+    
+                            <div id="second-number" class="number-field">
+                                <label for="of">De</label>
+                                <input class="number-choice-two" min="0" id="of" type="number">
+                            </div>
+    
+                            <div id="third-number" class="number-field">
+                                <label for="ofTwo">De</label>
+                                <input class="number-choice-three" min="0" id="ofTwo" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-gradient">
+                        <button type="submit">
+                            Sortear
+                            <i class="fa-solid fa-right-long"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="show-results display-show">
+                    <div class="text">
+                        <label>Resultado do sorteio</label>
+                        <span>Resultado</span>
+                    </div>
+                    <div class="numbers">
+                    </div>
+                    <button type="button">
+                        Sortear novamente
+                        <div class="icon-again">
+                            <img src="assets/svg/Vector (Stroke).svg" alt="">
+                            <img src="assets/svg/Vector.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.content-form {
+    margin-top: 42px;
+    margin-bottom: 80px;
+    grid-area: form;
+    margin-left: 6rem;
+    animation-name: slideFade;
+    animation-duration: .5s;
+
+    & .title-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        & label {
+            color: var(--content-primary);
+            text-transform: var(--uppercase);
+            font: var(--label-large);
+        }
+
+        & p {
+            color: var(--content-secondary);
+            font: var(--paragraph-large);
+        }
+    }
+
+    & .form {
+        margin: 40px 0 40px 0;
+
+        & .fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+
+            & .number-field {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+
+                & label {
+                    color: var(--content-secondary);
+                    text-transform: var(--uppercase);
+                    font: var(--label-medium);
+                }
+
+                & input {
+                    width: 100%;
+                    padding: 4px 8px;
+                    border-radius: 8px;
+                    background-color: var(--background-secondary);
+                    color: var(--content-primary);
+                    font: var(--display-small);
+                    border: transparent;
+                    text-align: center;
+                    position: relative;
+
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                    }
+
+                    &:focus {
+                        outline-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 1024px) {
+    form {
+        order: 1;
+    }
+
+    .content-form {
+        margin-top: 42px;
+        margin-bottom: 80px;
+        margin-left: 0;
+
+        & .title-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            & label {
+                color: var(--content-primary);
+                font: var(--label-large);
+            }
+
+            & p {
+                color: var(--content-tertiary);
+                font: var(--paragraph-medium);
+            }
+        }
+
+        & .form {
+            margin: 40px 0 40px 0;
+
+            & .fields {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+
+                & .number-field {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    align-items: center;
+
+                    & label {
+                        color: var(--content-secondary);
+                        font: var(--label-medium);
+                    }
+
+                    & input {
+                        width: 100%;
+                        padding: 4px 8px;
+                        border-radius: 8px;
+                        background-color: var(--background-secondary);
+                        color: var(--content-primary);
+                        font: var(--display-small);
+                        border: transparent;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        & button {
+            width: 100%;
+            height: 56px;
+            border-radius: 8px;
+            background-color: var(--background-tertiary);
+            color: var(--content-primary);
+            font: var(--label-medium);
+            border: transparent;
+            display: flex;
+            gap: 8px;
+            padding: 16px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

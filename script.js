@@ -8,6 +8,8 @@ const hiddenSorter = document.querySelector(".content-form")
 const submit = document.querySelector("form button")
 const reset = document.querySelector(".show-results button")
 
+let numbersArray = []
+
 submit.addEventListener("click", (event) => {
   event.preventDefault()
 
@@ -28,18 +30,23 @@ submit.addEventListener("click", (event) => {
 
   if (quantity > 0 && valueMin < valueMax) {
     let resultado = sortearNumeros(quantity, valueMin, valueMax);
+    numbersArray = resultado
 
     function addNumbers() {
-      const spanNumber = document.createElement("span")
-      spanNumber.append(resultado)
-      const divClassNumber = document.createElement("div")
-      divClassNumber.classList.add("number")
-      divClassNumber.append(spanNumber)
-      classNumbers.append(divClassNumber)
+      while (numbersArray.length > 0) {
+        const spanNumber = document.createElement("span")
+        spanNumber.append(numbersArray[0])
+        const divClassNumber = document.createElement("div")
+        divClassNumber.classList.add("number")
+        divClassNumber.append(spanNumber)
+        classNumbers.append(divClassNumber)
+        numbersArray.shift()
+      }
     }
   } else {
     alert("Insira valores válidos!");
   }
+
 
   addNumbers()
 
